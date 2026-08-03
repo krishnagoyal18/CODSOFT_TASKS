@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart To-Do App | Krishna Goyal</title>
+    <link rel="styleSheet" href="style.css"/>
+</head>
+<body>
+    <div class="topHeader">
+        <div class="topText">
+            <img src="/images/logo.png" id="listLogo">
+            <p id="topName">Smart To-Do</p>
+        </div>
+        <div id="darkMode">
+            <span>🌙</span>
+            <p>Dark Mode</p>
+            <input type="checkbox">
+        </div>
+    </div>
+    
+    
+    <div class="mainCard">
+        <h1 id="manageTasks">Manage Your Daily Tasks </h1>
+        <div>
+            <p id="taskOnTime">Stay organized and complete your task on time </p>
+        </div>
+        <div id="newTasks">
+            <input type="text" placeholder="Enter a new task..." id="searchInput">
+            <button id="addtask">+ Add Task</button>
+        </div>
+        
+    </div>
+
+    <div class="filterButtons">
+        <button class="taskShows" id="allBtn" >📋 All</button>
+        <button class="taskShows" id="pendingBtn" >⏳ Pending</button>
+        <button class="taskShows" id="completedBtn">✅ Completed</button>
+    </div>
+
+    <div class="taskStat">
+        <div class="box">
+            <img src="images/taskLogo.png" class="statIcon">
+            <div class="statText">
+                <h2 id="totalCount">6</h2>
+                <p id="totalCount">Total Tasks</p>
+            </div>
+            
+        </div>
+        <div class="box">
+            <img src="images/pendingLogo.png" class="statIcon">
+            <div class="statText">
+                <h2 id="pendingCount">6</h2>
+                <p id="pendingCount">Pending</p>
+            </div>
+            
+        </div>
+        <div class="box">
+            <img src="images/completeLogo.png" class="statIcon">
+            <div class="statText">
+                <h2 id="completedCount">0</h2>
+                <p id="completedCount">Completed</p>
+            </div>
+            
+        </div>
+    </div>
+
+    <div class="listSection">
+        <div class="doWork">
+            <input type="checkbox" class="check" >
+            <p>Learn JavaScript Basics</p>
+            <div class="rightSide">
+                <p class="taskTime">📅 28 Jul 2026, 10:00 AM</p>
+                <button class="deleteBtn">🗑️</button>
+            </div>
+        </div>
+
+        <div class="doWork">
+            <input type="checkbox" class="check" >
+            <p>Build To-Do App List</p>
+            <div class="rightSide">
+                <p class="taskTime">📅 28 Jul 2026, 10:00 AM</p>
+                <button class="deleteBtn">🗑️</button>
+            </div>
+        </div>
+
+        <div class="doWork">
+            <input type="checkbox" class="check" >
+            <p>Complete HTML & CSS Course</p>
+            <div class="rightSide">
+                <p class="taskTime">📅 28 Jul 2026, 10:00 AM</p>
+                <button class="deleteBtn">🗑️</button>
+            </div>
+        </div>
+
+        <div class="doWork">
+            <input type="checkbox" class="check" >
+            <p>Practice DOM Manipulation</p>
+            <div class="rightSide">
+                <p class="taskTime">📅 28 Jul 2026, 10:00 AM</p>
+                <button class="deleteBtn">🗑️</button>
+            </div>
+        </div>
+
+        <div class="doWork">
+            <input type="checkbox"  class="check">
+            <p>Go for Walk</p>
+            <div class="rightSide">
+                <p class="taskTime">📅 28 Jul 2026, 10:00 AM</p>
+                <button class="deleteBtn">🗑️</button>
+            </div>
+        </div>
+
+        <div class="doWork">
+            <input type="checkbox" class="check" >
+            <p>Read a Book</p>
+            <div class="rightSide">
+                <p class="taskTime">📅 28 Jul 2026, 10:00 AM</p>
+                <button class="deleteBtn">🗑️</button>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="clearBtns">
+        <div class="compClear">
+            <button id="clearComplete">🗑️ Clear Completed</button>
+        </div>
+        <div class="allClear">
+            <button id="clearAll">🗑️ Clear All</button>
+        </div>
+    </div>
+    <div class="keepGoing">
+        <h4>📋 Keep Going!</h4>
+        <p>You're doing great. Add more tasks and stay productive.</p>
+    </div>
+
+    <footer class="footer">
+        <p> © 2026 Krishna Goyal | Smart To-Do App</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
