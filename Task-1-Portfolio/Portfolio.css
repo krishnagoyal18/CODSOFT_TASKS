@@ -11,7 +11,6 @@ body{
   line-height:1.6;
 }
 
-/* ===== Navbar ===== */
 nav{
   position:sticky;
   top:0;
@@ -35,7 +34,6 @@ nav{
   color:#2563eb;
 }
 
-/* ===== Hero Section ===== */
 .hero{
   padding:90px 20px;
   text-align:center;
@@ -52,7 +50,6 @@ nav{
   margin-bottom:25px;
 }
 
-/* ===== Button ===== */
 .btn{
   display:inline-block;
   background:#111827;
@@ -69,7 +66,6 @@ nav{
   transform:translateY(-2px);
 }
 
-/* ===== Profile Image ===== */
 .profile-img{
   width:180px;
   height:180px;
@@ -80,7 +76,6 @@ nav{
   margin-bottom:20px;
 }
 
-/* ===== Section Styling ===== */
 section{
   padding:70px 20px;
 }
@@ -91,7 +86,6 @@ section h2{
   font-size:2rem;
 }
 
-/* ===== Skills ===== */
 .skills-list{
   display:flex;
   justify-content:center;
@@ -107,7 +101,6 @@ section h2{
   font-weight:600;
 }
 
-/* ===== Projects ===== */
 .project-card{
   background:white;
   padding:20px;
@@ -116,7 +109,6 @@ section h2{
   margin-bottom:20px;
 }
 
-/* ===== Contact ===== */
 #contact{
   text-align:center;
 }
@@ -126,7 +118,6 @@ section h2{
   text-decoration:none;
 }
 
-/* ===== Footer ===== */
 footer{
   text-align:center;
   padding:20px;
@@ -135,7 +126,6 @@ footer{
   margin-top:40px;
 }
 
-/* ===== Mobile ===== */
 @media(max-width:768px){
   nav{
     flex-direction:column;
