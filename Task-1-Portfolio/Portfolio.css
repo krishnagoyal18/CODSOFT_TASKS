@@ -78,7 +78,8 @@ button{
     justify-content: space-between;
     align-items: center;
     height : 90vh;
-    /* padding : 80 px; */
+    padding : 80px 20px;
+    text-align : center;
 }
 .left{
     width : 50%;
@@ -87,7 +88,16 @@ button{
     width : 350px;
     height: 350px;
     border-radius: 50%;
-    
+}
+
+.hero h1{
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.hero p{
+  font-size: 1.1rem;
+  color: #555;
 }
 
 .stats-container{
@@ -274,3 +284,5 @@ button{
         max-width: 320px;
     }
 }
+
+    
