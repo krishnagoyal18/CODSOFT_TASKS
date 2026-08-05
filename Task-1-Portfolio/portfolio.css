@@ -48,22 +48,18 @@ nav{
   font-weight:600;
   transition:0.3s;
 }
-.nav-links .btn{
-  background: transparent !important;
-  box-shadow: none !important;
-  padding: 0 !important;
-  border: none !important;
-  color: #111827 !important;
-  font-weight: 600;
-  display: inline-block;
+
+.nav-contact{
+  text-decoration:none;
+  color:#111827;
+  font-weight:600;
+  transition:0.3s;
 }
 
-.nav-links .btn:hover{
-  background: transparent !important;
-  color: #2563eb !important;
-  transform: none !important;
-  box-shadow: none !important;
+.nav-contact:hover{
+  color:#2563eb;
 }
+
 
 .nav-links a:hover{
   color:#2563eb;
