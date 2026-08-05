@@ -348,3 +348,25 @@ footer{
     gap:20px;
   }
 }
+
+/* ===== DARK MODE ===== */
+.dark{
+  background:#111827;
+  color:white;
+}
+
+.dark nav{
+  background:#1f2937;
+}
+
+.dark .project-card{
+  background:#1f2937;
+  color:white;
+}
+
+.dark .About-Text,
+.dark .Hero-Description,
+.dark .highlights,
+.dark .project-card p{
+  color:#d1d5db;
+}
