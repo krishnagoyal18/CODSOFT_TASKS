@@ -48,22 +48,21 @@ nav{
   font-weight:600;
   transition:0.3s;
 }
-
 .nav-links .btn{
-  background: transparent;
-  box-shadow: none;
-  padding: 0;
-  border: none;
-  color: #111827;
+  background: transparent !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  border: none !important;
+  color: #111827 !important;
   font-weight: 600;
   display: inline-block;
 }
 
 .nav-links .btn:hover{
-  background: transparent;
-  color: #2563eb;
-  transform: none;
-  box-shadow: none;
+  background: transparent !important;
+  color: #2563eb !important;
+  transform: none !important;
+  box-shadow: none !important;
 }
 
 .nav-links a:hover{
