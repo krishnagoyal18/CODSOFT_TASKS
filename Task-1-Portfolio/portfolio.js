@@ -1,7 +1,3 @@
-
-let contactBtn = document.getElementById("contactBtn");
-
-
 let text = "Aspiring Full Stack Developer";
 let i = 0;
 
