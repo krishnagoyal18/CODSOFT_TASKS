@@ -50,19 +50,20 @@ nav{
 }
 
 .nav-links .btn{
-  background:none;
-  box-shadow:none;
-  padding:0;
-  color:#111827;
-  border-radius:0;
-  font-weight:600;
+  background: transparent;
+  box-shadow: none;
+  padding: 0;
+  border: none;
+  color: #111827;
+  font-weight: 600;
+  display: inline-block;
 }
 
 .nav-links .btn:hover{
-  background:none;
-  color:#2563eb;
-  transform:none;
-  box-shadow:none;
+  background: transparent;
+  color: #2563eb;
+  transform: none;
+  box-shadow: none;
 }
 
 .nav-links a:hover{
