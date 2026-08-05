@@ -35,7 +35,7 @@ nav{
   display:flex;
   align-items:center;
   flex-wrap:wrap;
-  gap:15px;
+  gap:25px;
 }
 
 .nav-links a{
@@ -43,6 +43,10 @@ nav{
   color:#111827;
   font-weight:600;
   transition:0.3s;
+}
+
+.nav-links .btn{
+  color:white;
 }
 
 .nav-links a:hover{
@@ -55,7 +59,7 @@ nav{
 #navResumeBtn,
 #heroResumeBtn{
   display:inline-block;
-  background:#111827;
+  background:#2563eb;
   color:white;
   padding:10px 18px;
   border:none;
@@ -70,8 +74,12 @@ nav{
 #themeBtn:hover,
 #navResumeBtn:hover,
 #heroResumeBtn:hover{
-  background:#2563eb;
+  background:#1d4ed8;
   transform:translateY(-2px);
+}
+
+.nav-links .btn{
+  color:white;
 }
 
 /* ===== MAIN CONTAINER ===== */
