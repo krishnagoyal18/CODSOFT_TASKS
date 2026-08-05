@@ -50,7 +50,19 @@ nav{
 }
 
 .nav-links .btn{
-  color:white;
+  background:none;
+  box-shadow:none;
+  padding:0;
+  color:#111827;
+  border-radius:0;
+  font-weight:600;
+}
+
+.nav-links .btn:hover{
+  background:none;
+  color:#2563eb;
+  transform:none;
+  box-shadow:none;
 }
 
 .nav-links a:hover{
