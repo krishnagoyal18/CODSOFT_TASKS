@@ -18,9 +18,62 @@ let income = 0;
 let expense = 0;
 let balance = 0;
 
+let transactions =[];
+
 let editRow = null;
 let oldAmount = 0;
 let oldType = "";
+
+function savetransaction(){
+    localStorage.setItem("transactions", JSON.stringify(transactions))
+}
+
+function loadTransactions(){
+    const savedData = localStorage.getItem("transactions");
+
+    if(savedData){
+        transactions = JSON.parse(savedData);
+
+        transactions.forEach(transaction => {
+
+            if(transaction.type === "Income"){
+                income += transaction.amount;
+            }
+            else if(transaction.type === "Expense"){
+                expense += transaction.amount;
+            }
+
+            const row = document.createElement("tr");
+
+            row.innerHTML = `
+                <td>${transaction.title}</td>
+                <td>${transaction.category}</td>
+                <td>${transaction.type}</td>
+                <td>${transaction.amount}</td>
+                <td>${transaction.date}</td>
+                <td>
+                    <button type="button" class="deleteBtn">Delete</button>
+                </td>
+                <td>
+                    <button type="button" class="editBtn">Edit</button>
+                </td>
+            `;
+
+            transactionList.appendChild(row);
+
+            attachRowEvents(
+                row,
+                transaction.title,
+                transaction.amount,
+                transaction.type,
+                transaction.category,
+                transaction.date
+            );
+        });
+
+        updateCards();
+    }
+}
 
 function updateCards() {
     balance = income - expense;
@@ -57,6 +110,18 @@ function attachRowEvents(row, title, amount, type, categoryValue, date) {
 
         row.remove();
 
+        const index = transactions.findIndex(transaction =>
+            transaction.title === title &&
+            transaction.amount === amount &&
+            transaction.type === type &&
+            transaction.date === date
+        );
+
+        if(index !== -1){
+            transactions.splice(index, 1);
+            savetransaction();
+        }
+
         if(type === "Income"){
             income -= amount;
         }
@@ -69,6 +134,8 @@ function attachRowEvents(row, title, amount, type, categoryValue, date) {
     });
 
 }
+
+loadTransactions();
 
 form.addEventListener("submit", function (e) {
 
@@ -105,9 +172,25 @@ form.addEventListener("submit", function (e) {
         <td>${type}</td>
         <td>${amount}</td>
         <td>${date}</td>
-        <td><button type="button" class="deleteBtn">Delete</button></td>
-        <td><button type="button" class="editBtn">Edit</button></td>
+        <td><button type="button" class="deleteBtn">Delete</button>
+        <button type="button" class="editBtn">Edit</button>
+        </td>
         `;
+        transactions = transactions.map(transaction => {
+            if(
+                transaction.title === titleInput.value &&
+                transaction.amount === oldAmount
+            ){
+                return{
+                    title: title,
+                    amount: amount,
+                    type: type,
+                    category: categoryValue,
+                    date: date
+                };
+            }
+            return transaction;
+        });
 
         attachRowEvents(editRow, title, amount, type, categoryValue, date);
 
@@ -121,6 +204,14 @@ form.addEventListener("submit", function (e) {
     // ADD MODE
     else{
 
+        const newTransaction = {
+            title : title,
+            amount: amount,
+            type: type,
+            category: categoryValue,
+            date: date
+        };
+        transactions.push(newTransaction);
         const row = document.createElement("tr");
 
         row.innerHTML = `
@@ -147,6 +238,7 @@ form.addEventListener("submit", function (e) {
     }
 
     updateCards();
+    savetransaction();
 
     // Form clear
     titleInput.value = "";
